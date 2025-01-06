@@ -11,7 +11,6 @@ class Pokemon {
   async fetchData() {
     const response = await fetch(this.apiURL);
     this.data = await response.json();
-    console.log(this.data);
     this.displayPoke();
   }
 
@@ -30,7 +29,7 @@ class Pokemon {
         this.data.species.name.charAt(0).toUpperCase() +
         this.data.species.name.slice(1)
       }</h3>
-      <div id="poke-type">
+      <div class="poke-type ${this.data.types[0].type.name}">
         <p id="type-name">${this.data.types[0].type.name}</p>
       </div>
     <div>
