@@ -35,6 +35,6 @@ class Pokemon {
     <div>
     `;
 
-    document.getElementById("poke-cards").appendChild(card);
+    document.getElementById("poke-cards").prepend(card);
   }
 }
